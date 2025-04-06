@@ -25,6 +25,6 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy:
+      - name: Deploy
         run: |
           scp -r ./build/* ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/var/www/html/
