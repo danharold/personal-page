@@ -27,4 +27,4 @@ jobs:
 
       - name: Deploy
         run: |
-          scp -r ./build/* ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/var/www/html/
+          scp -r ./output/* ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }}:/var/www/html/
