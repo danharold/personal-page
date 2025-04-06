@@ -44,4 +44,10 @@ jobs:
 
       - name: Deploy
         run: |
-          scp -r .svelte-kit/output/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_SERVER_IP }}:/var/www/html/
+          scp -r ./build/* deploy:~/deploy/personal-page/
+
+      - name: Restart process
+        run: |
+          ssh deploy "(
+            pm2 -f start ~/deploy/personal-page/index.js --name personal-page
+          )"
