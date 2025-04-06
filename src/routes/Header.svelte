@@ -18,10 +18,17 @@
 			<Button variant="ghost" href="#projects">Projects</Button>
 			<Button variant="ghost" href="#contact">Contact</Button>
 		</nav>
-		<div class="justify-self-end">
-			<Button on:click={toggleMode} size="icon" class="cursor-pointer justify-self-end">
-				<Sun class="h-6 w-6 scale-100 dark:scale-0" />
-				<Moon class="absolute h-6 w-6 scale-0 dark:scale-100" />
+		<div class="flex items-center justify-self-end">
+			<span class="text-muted-foreground/20 mr-4 scale-0 text-xs dark:scale-100"
+				>⚠ flashbang warning ⚠</span
+			>
+			<Button
+				on:click={toggleMode}
+				size="icon"
+				class="bg-foreground/80 h-8 w-8 cursor-pointer justify-self-end"
+			>
+				<Sun class="h-5 w-5 scale-0 dark:scale-100" />
+				<Moon class="absolute h-5 w-5 scale-100 dark:scale-0" />
 			</Button>
 		</div>
 	</div>
