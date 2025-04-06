@@ -2,14 +2,16 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
-	import { Sun, Moon } from 'lucide-svelte';
+	import { Sun, Moon, ChevronRightIcon } from 'lucide-svelte';
 
 	import { toggleMode } from 'mode-watcher';
+
+	import ConsoleTyper from './ConsoleTyper.svelte';
 </script>
 
 <header class="w-full">
 	<div class="grid w-full grid-cols-3 items-center p-4">
-		<a href="/" class="flex justify-self-start font-mono text-lg">😸 danharold.com</a>
+		<a href="/" class="flex justify-self-start font-mono text-lg"><ConsoleTyper /></a>
 		<nav class="flex flex-1 justify-center space-x-2">
 			<Button variant="ghost" href="/about">About</Button>
 			<Button variant="ghost" href="/Blog">Blog</Button>
