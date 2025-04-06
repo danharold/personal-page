@@ -84,7 +84,9 @@
 			"alias please='sudo'",
 			'yes | rm -rf /',
 			'npm i motivation',
-			"You're amazing!"
+			'¯\\_(ツ)_/¯',
+			'(╯°□°）╯︵ ┻━┻',
+			':D :> ^_^ c: >:]'
 		];
 
 		typeMessages(messages);
