@@ -1,1 +1,116 @@
+@import '@fontsource/dm-sans';
+@import '@fontsource/mononoki';
+
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-background: hsl(0 0% 100%);
+	--color-foreground: hsl(20 14.3% 4.1%);
+
+	--color-muted: hsl(60 4.8% 95.9%);
+	--color-muted-foreground: hsl(25 5.3% 44.7%);
+
+	--color-popover: hsl(0 0% 100%);
+	--color-popover-foreground: hsl(20 14.3% 4.1%);
+
+	--color-card: hsl(0 0% 100%);
+	--color-card-foreground: hsl(20 14.3% 4.1%);
+
+	--color-border: hsl(20 5.9% 90%);
+	--color-input: hsl(20 5.9% 90%);
+
+	--color-primary: hsl(24 9.8% 10%);
+	--color-primary-foreground: hsl(60 9.1% 97.8%);
+
+	--color-secondary: hsl(60 4.8% 95.9%);
+	--color-secondary-foreground: hsl(24 9.8% 10%);
+
+	--color-accent: hsl(60 4.8% 95.9%);
+	--color-accent-foreground: hsl(24 9.8% 10%);
+
+	--color-destructive: hsl(0 72.2% 50.6%);
+	--color-destructive-foreground: hsl(60 9.1% 97.8%);
+
+	--color-ring: hsl(20 14.3% 4.1%);
+}
+
+@layer base {
+	@variant dark {
+		--color-background: hsl(20 14.3% 4.1%);
+		--color-foreground: hsl(60 9.1% 97.8%);
+
+		--color-muted: hsl(12 6.5% 15.1%);
+		--color-muted-foreground: hsl(24 5.4% 63.9%);
+
+		--color-popover: hsl(20 14.3% 4.1%);
+		--color-popover-foreground: hsl(60 9.1% 97.8%);
+
+		--color-card: hsl(20 14.3% 4.1%);
+		--color-card-foreground: hsl(60 9.1% 97.8%);
+
+		--color-border: hsl(12 6.5% 15.1%);
+		--color-input: hsl(12 6.5% 15.1%);
+
+		--color-primary: hsl(60 9.1% 97.8%);
+		--color-primary-foreground: hsl(24 9.8% 10%);
+
+		--color-secondary: hsl(12 6.5% 15.1%);
+		--color-secondary-foreground: hsl(60 9.1% 97.8%);
+
+		--color-accent: hsl(12 6.5% 15.1%);
+		--color-accent-foreground: hsl(60 9.1% 97.8%);
+
+		--color-destructive: hsl(0 62.8% 30.6%);
+		--color-destructive-foreground: hsl(60 9.1% 97.8%);
+
+		--color-ring: hsl(24 5.7% 82.9%);
+	}
+}
+
+@theme {
+	--color-meow: #123123;
+}
+
+@layer base {
+	@variant dark {
+		--color-meow: #321321;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background;
+	}
+	body .prose :is(h2, h3, h4, h5, h6) {
+		@apply mt-8 mb-3;
+	}
+	.prose p:not(:is(h2, h3, h4, h5, h6) + p) {
+		@apply mt-7;
+	}
+	.prose :is(ul, ol) {
+		@apply pl-5;
+	}
+	.prose :is(ul, ol) li {
+		@apply mx-2 ps-2;
+	}
+	.prose pre {
+		max-inline-size: 100%;
+		@apply mt-4 rounded-sm p-3;
+	}
+	.prose h1 {
+		@apply text-5xl font-bold;
+	}
+	.prose h2 {
+		@apply text-4xl font-semibold;
+	}
+	.math-display {
+		margin-top: 0;
+		/* background-color: var(--surface-1); */
+		/* border: 3px dotted var(--surface-4); */
+	}
+}
