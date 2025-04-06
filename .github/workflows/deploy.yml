@@ -49,5 +49,5 @@ jobs:
       - name: Restart process
         run: |
           ssh deploy "(
-            pm2 startOrRestart personal-page
+            pm2 restart personal-page
           )"
