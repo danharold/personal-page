@@ -49,5 +49,5 @@ jobs:
       - name: Restart process
         run: |
           ssh deploy "(
-            pm2 start ~/deploy/personal-page/index.js --name personal-page
+            pm2 -f start ~/deploy/personal-page/index.js --name personal-page
           )"
