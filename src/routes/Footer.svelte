@@ -32,34 +32,20 @@
 
 <footer id="contact">
 	<Separator />
-	<div class="px-6 py-4">
-		<div class="text-muted-foreground flex flex-col space-y-4">
-			<div class="flex flex-row items-center space-x-2">
-				<MapPin strokeWidth={1.5} size={16} class="text-foreground" />
-				<p class="font-sans text-xs">United Kingdom</p>
-			</div>
-			<div class="flex flex-row items-center space-x-2">
-				<GithubIcon strokeWidth={1.5} size={16} class="text-foreground" />
-				<p class="font-sans text-xs">github.com/danharold</p>
-			</div>
-			<div class="flex flex-row items-center space-x-2">
-				<Mail strokeWidth={1.5} size={16} class="text-foreground" />
-				<p class="font-sans text-xs">dan@danharold.com</p>
-			</div>
+	<div class="py-4">
+		<div class="flex justify-center space-x-4">
+			<Button variant="outline" size="icon">
+				<a href="https://github.com/danharold" target="_blank" aria-label="GitHub"
+					><GithubIcon strokeWidth={0.8} size={24} />
+				</a>
+			</Button>
+			<Button variant="outline" size="icon">
+				<a href="mailto:dan@danharold.com" aria-label="Email"
+					><Mail strokeWidth={0.8} size={24} /></a
+				>
+			</Button>
 		</div>
-
-		<!-- <div class="flex justify-center space-x-4">
-			<Button variant="outline" size="icon">
-				<a href="/" target="_blank" aria-label="GitHub"><Github strokeWidth={1} /> </a>
-			</Button>
-			<Button variant="outline" size="icon">
-				<a href="/" target="_blank" aria-label="LinkedIn"><Linkedin strokeWidth={1} /></a>
-			</Button>
-			<Button variant="outline" size="icon">
-				<a href="mailto:dan@danharold.com" aria-label="Email"><Mail strokeWidth={1} /></a>
-			</Button>
-		</div> -->
-		<p class="text-muted-foreground mt-6 text-center text-sm">
+		<p class="text-muted-foreground mt-4 text-center text-sm">
 			Dan Harold &copy; {new Date().getFullYear()}
 		</p>
 	</div>
