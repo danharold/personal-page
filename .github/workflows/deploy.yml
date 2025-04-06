@@ -42,6 +42,12 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy
+      - name: Deploy to server
         run: |
-          scp -r ./build/* deploy:/var/www/html/
+          scp -r ./build/* deploy:~/deploy/personal-page/
+
+      - name: Restart process
+        run: |
+          ssh deploy "(
+            pm2 start ~/deploy/personal-page/index.js --name personal-page
+          )"
