@@ -10,6 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Remove known hosts
+        run: ssh-keygen -R ${{ secrets.SERVER_IP }}
+
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.0
         with:
