@@ -34,6 +34,9 @@
 	--color-destructive-foreground: hsl(60 9.1% 97.8%);
 
 	--color-ring: hsl(20 14.3% 4.1%);
+
+	--font-mono: mononoki, monospace;
+	--font-sans: DM Sans, sans-serif;
 }
 
 @layer base {
