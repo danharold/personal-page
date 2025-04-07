@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button/';
-	import * as Card from '$lib/components/ui/card/';
-	import { Github, Linkedin, Mail } from 'lucide-svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import * as Card from '$lib/components/ui/card/index.js';
+	import { ArrowRight } from 'lucide-svelte';
+	import * as Carousel from '$lib/components/ui/carousel/index.js';
 
-	const projects = [
+	const featured_projects = [
 		{
 			id: 1,
 			title: 'Project One',
@@ -28,42 +29,64 @@
 			description: 'SvelteKit exploration.',
 			image: '/images/project4.jpg'
 		}
-		// Add more projects
 	];
 </script>
 
-<div class="dark container mx-auto flex min-h-1/2 flex-col px-4">
-	<main class="flex-grow py-10 md:py-16">
-		<!-- <section class="mb-16 text-center">
-			<h1 class="mb-3 text-4xl font-bold md:text-5xl">Your Name</h1>
-			<p class="text-muted-foreground text-lg">
-				Web Developer | Minimalist Designer | Svelte Enthusiast
-			</p>
-		</section> -->
+<!-- <h1 class="text-4xl font-bold">Dan Harold</h1>
+	<p class="text-muted-foreground text-lg">Full-Stack Developer & Data Enthusiast</p>
+	<div class="flex flex-row space-x-2">
+		<MapPin strokeWidth={0.8} size={24} />
+		<p class="text-muted-foreground text-lg">United Kingdom</p>
+	</div>
 
-		<!-- <section id="projects">
-			<h2 class="mb-8 text-center text-3xl font-semibold md:text-left">Featured Projects</h2>
-			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{#each projects as project (project.id)}
-					<Card.Root class="overflow-hidden">
-						{#if project.image}
-							<div class="bg-muted flex aspect-video items-center justify-center">
-								<span class="text-muted-foreground text-sm">Image</span>
-							</div>
-						{/if}
-						<Card.Header>
-							<Card.Title>{project.title}</Card.Title>
-						</Card.Header>
-						<Card.Content>
-							<Card.Description>{project.description}</Card.Description>
-						</Card.Content>
-						<Card.Footer>
-							<Button variant="link" class="h-auto p-0">Learn More</Button>
-						</Card.Footer>
-					</Card.Root>
-				{/each}
-			</div>
-		</section>
-	</main> -->
-	</main>
-</div>
+	<p>
+		Building innovative web applications and data-driven solutions with Python and modern web
+		technologies.
+	</p> -->
+
+<section class="my-auto h-full w-full items-center justify-center text-center">
+	<div>
+		<h1 class="mb-0 text-6xl font-bold">Dan Harold</h1>
+		<p class=" text-muted-foreground mb-6">Full-Stack Developer | Data Enthusiast</p>
+		<p class="text-foreground text-xl">
+			Building web applications and data-driven solutions using Python and modern web technologies.
+			I enjoy solving problems and learning new stuff to build cool things. Always learning, always
+			creating.
+		</p>
+	</div>
+	<!-- <div class="bg-foreground m-10 h-50">
+		<p class=" text-muted-foreground">Central Placeholder</p>
+	</div> -->
+	<Carousel.Root class="mx-20 my-10">
+		<Carousel.Content>
+			{#each featured_projects as proj}
+				<Carousel.Item class="md:basis-1/2 lg:basis-1/3"
+					><div class="">
+						<Card.Root>
+							{#if proj.image}
+								<div class="bg-muted flex aspect-video items-center justify-center">
+									<span class="text-muted-foreground text-sm">Image</span>
+								</div>
+							{/if}
+							<Card.Header>
+								<Card.Title>{proj.title}</Card.Title>
+							</Card.Header>
+							<Card.Content>
+								<Card.Description>{proj.description}</Card.Description>
+							</Card.Content>
+							<Card.Footer>
+								<Button variant="link" class="h-auto p-0">Learn More</Button>
+							</Card.Footer>
+						</Card.Root>
+					</div></Carousel.Item
+				>
+			{/each}
+		</Carousel.Content>
+		<Carousel.Previous />
+		<Carousel.Next />
+	</Carousel.Root>
+
+	<Button variant="outline" class="text-foreground rounded-full p-4" href="/projects">
+		View all of my projects
+	</Button>
+</section>

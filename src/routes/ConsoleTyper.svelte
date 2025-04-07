@@ -77,16 +77,20 @@
 		const messages = [
 			'Hello!',
 			'Welcome!',
-			'Nice to see you',
+			'Nice to see you!',
 			'make coffee',
 			'kill -9 procrastination',
 			"grep 'TODO' *.js | wc -l",
 			"alias please='sudo'",
 			'yes | rm -rf /',
-			'npm i motivation',
+			'npm i new-ideas',
 			'¯\\_(ツ)_/¯',
 			'(╯°□°）╯︵ ┻━┻',
-			':D :> ^_^ c: >:]'
+			':D :> ^_^ c: >:]',
+			'This is fine.',
+			'bug or feature? yes.',
+			'gg ez',
+			'The cake is a lie.'
 		];
 
 		typeMessages(messages);

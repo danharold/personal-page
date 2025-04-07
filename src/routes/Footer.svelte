@@ -12,16 +12,14 @@
 		<div class="">
 			<Button variant="outline" size="icon">
 				<a href="https://github.com/danharold" target="_blank" aria-label="GitHub"
-					><GithubIcon strokeWidth={0.8} size={24} />
+					><GithubIcon strokeWidth={2} size={24} />
 				</a>
 			</Button>
 			<Button variant="outline" size="icon">
-				<a href="mailto:dan@danharold.com" aria-label="Email"
-					><Mail strokeWidth={0.8} size={24} /></a
-				>
+				<a href="mailto:dan@danharold.com" aria-label="Email"><Mail strokeWidth={2} size={24} /></a>
 			</Button>
 		</div>
-		<p class="text-muted-foreground text-center text-sm">
+		<p class="text-muted-foreground/60 text-center text-sm">
 			&copy; {new Date().getFullYear()} danharold.com
 		</p>
 
