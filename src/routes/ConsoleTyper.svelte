@@ -95,4 +95,4 @@
 	});
 </script>
 
-<span class="font-mono text-lg">{text}{cursor}</span>
+<span class="overflow-x-visible font-mono text-lg whitespace-nowrap">{text}{cursor}</span>
