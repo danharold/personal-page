@@ -45,6 +45,7 @@
 		"@fontsource/mononoki": "^5.2.5",
 		"@lucide/svelte": "^0.487.0",
 		"@sveltejs/adapter-node": "^5.2.12",
+		"embla-carousel-autoplay": "^8.6.0",
 		"mode-watcher": "^0.5.1",
 		"typography": "^0.16.24"
 	}

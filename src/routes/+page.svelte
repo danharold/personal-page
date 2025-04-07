@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card/index.js';
-	import { ArrowRight } from 'lucide-svelte';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
+
+	import Autoplay from 'embla-carousel-autoplay';
 
 	const featured_projects = [
 		{
@@ -32,18 +33,6 @@
 	];
 </script>
 
-<!-- <h1 class="text-4xl font-bold">Dan Harold</h1>
-	<p class="text-muted-foreground text-lg">Full-Stack Developer & Data Enthusiast</p>
-	<div class="flex flex-row space-x-2">
-		<MapPin strokeWidth={0.8} size={24} />
-		<p class="text-muted-foreground text-lg">United Kingdom</p>
-	</div>
-
-	<p>
-		Building innovative web applications and data-driven solutions with Python and modern web
-		technologies.
-	</p> -->
-
 <section class="my-auto h-full w-full items-center justify-center text-center">
 	<div>
 		<h1 class="mb-0 text-6xl font-bold">Dan Harold</h1>
@@ -54,10 +43,7 @@
 			creating.
 		</p>
 	</div>
-	<!-- <div class="bg-foreground m-10 h-50">
-		<p class=" text-muted-foreground">Central Placeholder</p>
-	</div> -->
-	<Carousel.Root class="mx-20 my-10">
+	<Carousel.Root class="mx-10 my-10" plugins={[Autoplay({ delay: 5000 })]}>
 		<Carousel.Content>
 			{#each featured_projects as proj}
 				<Carousel.Item class="md:basis-1/2 lg:basis-1/3"
