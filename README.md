@@ -1,3 +1,5 @@
-my personal page :)
+## My Personal Page
 
-hosted at danharold.com
+- Built with SvelteKit
+- Styled with Tailwind + shadcn-svelte
+- Deployed remotely using GH Actions to my linode server
