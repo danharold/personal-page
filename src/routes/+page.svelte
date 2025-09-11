@@ -39,8 +39,6 @@
 		<p class=" text-muted-foreground mb-6">Full-Stack Developer | Data Enthusiast</p>
 		<p class="text-foreground text-xl">
 			Building web applications and data-driven solutions using Python and modern web technologies.
-			I enjoy solving problems and learning new stuff to build cool things. Always learning, always
-			creating.
 		</p>
 	</div>
 	<Carousel.Root class="mx-10 my-10" plugins={[Autoplay({ delay: 5000 })]}>

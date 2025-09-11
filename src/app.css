@@ -72,16 +72,6 @@
 	}
 }
 
-@theme {
-	--color-meow: #123123;
-}
-
-@layer base {
-	@variant dark {
-		--color-meow: #321321;
-	}
-}
-
 @layer base {
 	* {
 		@apply border-border;
